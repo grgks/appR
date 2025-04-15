@@ -2,6 +2,8 @@ const User = require('../models/user.model');
 const userService = require('../services/user.services');
 const bcrypt = require('bcrypt');
 
+const logger = require('../logger/logger');
+
 exports.findAll = async(req, res) => {
   console.log("Find all users from collection users");
 
@@ -9,8 +11,12 @@ exports.findAll = async(req, res) => {
     // const result = await User.find();
     const result = await userService.findAll();
     res.status(200).json({status: true, data: result});
+    logger.info("Success in reading all users");
+    logger.warn("Success in reading all users");
+    logger.error("Message with error");
   } catch (err) {
     console.log("Problem in reading users", err);
+    logger.error("Problem in reading all users", err);
     res.status(400).json({status:false, data: err});
   }
 }
@@ -35,14 +41,16 @@ exports.findOne = async(req, res) => {
 
 exports.create = async(req, res) => {
   console.log("Create User");
-
   let data = req.body;
-  const SaltOrRounds =10;// κυκλοι κρυπτογραφησης
-  const hashedPassword = await bcrypt.hash(data.password, SaltOrRounds);   //κρυπτογραφηση με 10 κυκλους
+  const SaltOrRounds = 10;
   
+  let hashedPassword = "";
+  if (data.password)
+    hashedPassword = await bcrypt.hash(data.password, SaltOrRounds)
+   
   const newUser = new User({
     username: data.username,
-    password: hashedPassword,  // εδω μπαινει η μεταβλητη κρυπτογραφησης
+    password: hashedPassword,
     name: data.name,
     surname: data.surname,
     email: data.email,
