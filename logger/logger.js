@@ -1,3 +1,7 @@
+//Jest tests
+require('dotenv').config();
+
+
 require('winston-daily-rotate-file');
 require('winston-mongodb')
 const { format, createLogger, transports } = require('winston');

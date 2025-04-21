@@ -11,11 +11,12 @@
     "test": "jest --testTimeout=5000",
     "dev": "node --env-file=.env --watch server.js"
   },
-  "jest":{
-    "collectCoverage":true,
-    "coveragePathIgnorePatterns":["/node_modules/",
-  "/logs"
-]
+  "jest": {
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/logs"
+    ]
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
