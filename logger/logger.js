@@ -1,5 +1,5 @@
 //Jest tests
-require('dotenv').config();
+//require('dotenv').config();
 
 
 require('winston-daily-rotate-file');

@@ -13,6 +13,7 @@ const auth = require('./routes/auth.routes');
 app.use('/api/auth', auth);
 app.use('/api/users', user);
 app.use('/api/user-product', userProduct);
+app.use(express.static('files'));
 
 app.use(
   '/api-docs', 
