@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Συνάρτηση για την εμφάνιση των προϊόντων
+
 async function fetchProducts() {
   try {
       const response = await fetch('/api/products');
@@ -37,7 +37,7 @@ async function fetchProducts() {
   }
 }
 
-// Συνάρτηση για τη δημιουργία νέου προϊόντος
+
 async function createProduct(event) {
   event.preventDefault();
 
@@ -63,7 +63,7 @@ async function createProduct(event) {
       const data = await response.json();
       if (data.status) {
           alert('Το προϊόν δημιουργήθηκε με επιτυχία!');
-          fetchProducts();  // Ανανεώση λίστας
+          fetchProducts();  
       } else {
           console.error('Πρόβλημα με τη δημιουργία του προϊόντος:', data.data);
       }
