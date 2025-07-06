@@ -41,29 +41,29 @@
 ### 1. Clone the repository
 
 ---
-bash
-git clone <repository-url>
-cd appR
-npm install
+bash:
+- git clone <repository-url>
+- cd appR
+- npm install
 
 ---
 ### 2. Setup your environment
 Create a .env file at the root of the project:
 
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/appr
-JWT_SECRET=your-jwt-secret
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
+- PORT=3000
+- MONGODB_URI=mongodb://localhost:27017/appr
+- JWT_SECRET=your-jwt-secret
+- GOOGLE_CLIENT_ID=your-google-client-id
+- GOOGLE_CLIENT_SECRET=your-google-client-secret
 
 ### 3. Run the application
 - bash
-npm start       # Run in production mode
-npm run dev     # Run in development mode (with nodemon)
-npm test        # Run unit tests with Jest
+- npm start      - # Run in production mode
+- npm run dev    - # Run in development mode (with nodemon)
+- npm test       - # Run unit tests with Jest
 
 
-###📄 API Documentation : 👉 http://localhost:3000/api-docs
+📄 API Documentation : 👉 http://localhost:3000/api-docs
 
 
 
