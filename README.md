@@ -29,27 +29,30 @@
 
 🚀 Quick Start
 
-Clone & Install
+-1.Clone & Install :
 
-bashgit clone <repository-url>
+bash
+git clone <repository-url>
 cd appR
 npm install
 
-Environment Setup
-Create .env file:
+-2.Environment Setup Create .env file:
 
-envPORT=3000
-MONGODB_URI=mongodb://localhost:27017/appr
-JWT_SECRET=your-jwt-secret
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
+env:
+-PORT=3000
+-MONGODB_URI=mongodb://localhost:27017/appr
+-JWT_SECRET=your-jwt-secret
+-GOOGLE_CLIENT_ID=your-google-client-id
+-GOOGLE_CLIENT_SECRET=your-google-client-secret
 
-Run
+-3.Run
 
-bashnpm start          # Production
+bash
+npm start          # Production
 npm run dev        # Development
 npm test           # Run tests
 
+---
 📄 API Documentation
 Access Swagger UI at: http://localhost:3000/api-docs
 
