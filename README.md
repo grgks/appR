@@ -47,7 +47,7 @@ cd appR
 npm install
 
 ---
-- 2. Setup your environment
+### 2. Setup your environment
 Create a .env file at the root of the project:
 
 PORT=3000
@@ -56,14 +56,14 @@ JWT_SECRET=your-jwt-secret
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 
-- 3. Run the application
-     bash
+### 3. Run the application
+- bash
 npm start       # Run in production mode
 npm run dev     # Run in development mode (with nodemon)
 npm test        # Run unit tests with Jest
 
 
-##📄 API Documentation : 👉 http://localhost:3000/api-docs
+###📄 API Documentation : 👉 http://localhost:3000/api-docs
 
 
 
